@@ -1,26 +1,84 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 20 14% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 10%;
+    --primary: 25 90% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 35% 94%;
+    --secondary-foreground: 20 14% 10%;
+    --muted: 40 20% 96%;
+    --muted-foreground: 20 10% 45%;
+    --accent: 43 90% 50%;
+    --accent-foreground: 20 14% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 25 90% 45%;
+    --radius: 0.5rem;
+    --saffron: #E8520A;
+    --turmeric: #D4A017;
+    --cream: #FDF6EC;
+    --brown: #6B3A1F;
+    --green: #2D5016;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
 }
+
+@layer components {
+  .btn-saffron {
+    @apply bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline-saffron {
+    @apply border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-amber-900;
+  }
+  .section-subheading {
+    @apply text-lg text-amber-700 mt-3;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E8520A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.spice-gradient {
+  background: linear-gradient(135deg, #FDF6EC 0%, #FDEBD0 50%, #FAD7A0 100%);
+}
+
+.rich-text-content h1 { @apply text-3xl font-bold text-amber-900 mb-4 mt-6; }
+.rich-text-content h2 { @apply text-2xl font-bold text-amber-900 mb-3 mt-5; }
+.rich-text-content h3 { @apply text-xl font-semibold text-amber-800 mb-2 mt-4; }
+.rich-text-content p { @apply text-gray-700 mb-4 leading-relaxed; }
+.rich-text-content ul { @apply list-disc pl-6 mb-4 space-y-1 text-gray-700; }
+.rich-text-content ol { @apply list-decimal pl-6 mb-4 space-y-1 text-gray-700; }
+.rich-text-content li { @apply leading-relaxed; }
+.rich-text-content a { @apply text-orange-600 hover:underline; }
+.rich-text-content strong { @apply font-semibold text-amber-900; }
+.rich-text-content blockquote { @apply border-l-4 border-orange-400 pl-4 italic text-gray-600 my-4; }
