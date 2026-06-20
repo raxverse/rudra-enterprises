@@ -43,31 +43,31 @@ export default function ReviewsSection({ reviews }: { reviews: Review[] }) {
       <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFF' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")" }} />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block text-orange-400 text-sm font-semibold tracking-widest uppercase mb-3">Happy Customers</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="inline-block text-orange-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2 sm:mb-3">Happy Customers</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
             What Our Customers Say
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-500 mx-auto mt-5 rounded-full" />
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-500 mx-auto mt-4 sm:mt-5 rounded-full" />
         </div>
 
         {reviews.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
             {reviews.map((review) => (
-              <div key={review.id} className="bg-amber-900/50 border border-amber-800/50 backdrop-blur-sm rounded-2xl p-6 card-hover">
-                <div className="flex items-center gap-1 mb-4">
+              <div key={review.id} className="bg-amber-900/50 border border-amber-800/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 card-hover">
+                <div className="flex items-center gap-1 mb-3 sm:mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-amber-400 fill-amber-400' : 'text-amber-700'}`} />
+                    <Star key={i} className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${i < review.rating ? 'text-amber-400 fill-amber-400' : 'text-amber-700'}`} />
                   ))}
                 </div>
-                <p className="text-amber-100 text-sm leading-relaxed mb-5 italic">"{review.review}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-bold text-sm">
+                <p className="text-amber-100 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 italic">"{review.review}"</p>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-bold text-xs sm:text-sm flex-shrink-0">
                     {review.name[0].toUpperCase()}
                   </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm">{review.name}</div>
-                    <div className="text-amber-400 text-xs">Verified Customer</div>
+                  <div className="min-w-0">
+                    <div className="text-white font-semibold text-xs sm:text-sm truncate">{review.name}</div>
+                    <div className="text-amber-400 text-xs">Verified</div>
                   </div>
                 </div>
               </div>
@@ -75,11 +75,11 @@ export default function ReviewsSection({ reviews }: { reviews: Review[] }) {
           </div>
         )}
 
-        <div className="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-2xl">
-          <h3 className="text-2xl font-bold text-amber-900 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <div className="max-w-2xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-2xl">
+          <h3 className="text-xl sm:text-2xl font-bold text-amber-900 mb-1 sm:mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
             Share Your Experience
           </h3>
-          <p className="text-amber-700 text-sm mb-6">Your review will appear after approval.</p>
+          <p className="text-amber-700 text-xs sm:text-sm mb-5 sm:mb-6">Your review will appear after approval.</p>
 
           {submitted ? (
             <div className="text-center py-8">
@@ -137,7 +137,7 @@ export default function ReviewsSection({ reviews }: { reviews: Review[] }) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold py-3 rounded-lg transition-colors"
+                className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold py-2.5 sm:py-3 rounded-lg text-sm sm:text-base transition-colors"
               >
                 {loading ? 'Submitting...' : 'Submit Review'}
               </button>

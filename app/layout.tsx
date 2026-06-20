@@ -16,9 +16,9 @@ export default async function RootLayout({
   const settings = await getSettings();
 
   return (
-    <html lang="en">
-      <body>
-        <div className="min-h-screen flex flex-col">
+    <html lang="en" className="bg-background scroll-smooth">
+      <body className="bg-background text-foreground">
+        <div className="min-h-screen flex flex-col bg-background">
           <Navbar settings={settings} />
           <main className="flex-1 pt-16">{children}</main>
           <Footer settings={settings} />
