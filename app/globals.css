@@ -24,17 +24,15 @@
     --input: 40 20% 88%;
     --ring: 25 90% 45%;
     --radius: 0.5rem;
-    --saffron: #E8520A;
-    --turmeric: #D4A017;
-    --cream: #FDF6EC;
-    --brown: #6B3A1F;
-    --green: #2D5016;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    @apply bg-background scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
