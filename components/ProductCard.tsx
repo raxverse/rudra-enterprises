@@ -1,5 +1,5 @@
 import { ShoppingCart, Weight } from 'lucide-react';
-import type { Product } from '@/lib/db';
+import type { Product } from '@/lib/data';
 
 interface ProductCardProps {
   product: Product;
