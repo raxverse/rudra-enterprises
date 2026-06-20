@@ -79,13 +79,11 @@ export const pages = [
 export const products = [
   {
     id: '1',
-    name: 'Parashree Buknoo,
-    description:
-      'Our signature blend of aromatic whole spices ground to perfection.',
+    name: 'Parashree Buknoo',
+    description: 'Our signature blend of aromatic whole spices ground to perfection.',
     weight: '100g',
     price: '₹40',
-    image_url:
-      '/parashree_buknoo.jpg',
+    image_url: "parashreebuknoo.jpg",
     is_featured: true,
     sort_order: 1,
   },
