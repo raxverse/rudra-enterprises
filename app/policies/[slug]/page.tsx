@@ -65,9 +65,7 @@ export default async function PolicyPage({ params }: { params: { slug: string } 
           <div className="lg:col-span-3">
             <div className="bg-white border border-amber-100 rounded-2xl p-8 shadow-sm">
               <div className="rich-text-content" dangerouslySetInnerHTML={{ __html: page.content || '' }} />
-              <p className="text-xs text-gray-400 mt-8 pt-6 border-t border-gray-100">
-                Last updated: {new Date(page.updated_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
-              </p>
+
             </div>
           </div>
         </div>

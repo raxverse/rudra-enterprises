@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Star } from 'lucide-react';
-import type { Review } from '@/lib/db';
+import type { Review } from '@/lib/data';
 
 export default function ReviewsSection({ reviews }: { reviews: Review[] }) {
   const [name, setName] = useState('');

@@ -1,7 +1,25 @@
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  weight: string;
+  price: string;
+  image_url: string;
+  is_featured: boolean;
+  sort_order: number;
+}
+
+export interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  review: string;
+}
+
 export const settings = {
   site_name: 'Rudra Enterprises',
-  whatsapp_number: '9919678020',
-  phone_number: '+91 9919678020',
+  whatsapp_number: '+919919678020',
+  phone_number: '+919919678020',
   email: 'info@rudraenterprises.com',
   address: 'India',
   facebook_url: '',

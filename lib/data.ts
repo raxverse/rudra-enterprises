@@ -5,6 +5,9 @@ import {
   reviews,
 } from './static-data';
 
+export type { Product } from './static-data';
+export type { Review } from './static-data';
+
 export async function getSettings() {
   return settings;
 }

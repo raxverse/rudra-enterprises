@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
-import type { Product } from '@/lib/db';
+import type { Product } from '@/lib/data';
 
 export default function FeaturedProducts({
   products,
