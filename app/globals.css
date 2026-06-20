@@ -1,42 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14% 10%;
-    --primary: 25 90% 45%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 40 35% 94%;
-    --secondary-foreground: 20 14% 10%;
-    --muted: 40 20% 96%;
-    --muted-foreground: 20 10% 45%;
-    --accent: 43 90% 50%;
-    --accent-foreground: 20 14% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 25 90% 45%;
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
   }
   html {
-    @apply bg-background scroll-smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    scroll-behavior: smooth;
   }
 }
 
@@ -56,10 +25,6 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .hero-pattern {
