@@ -79,75 +79,15 @@ export const pages = [
 export const products = [
   {
     id: '1',
-    name: 'Garam Masala',
+    name: 'Parashree Buknoo,
     description:
       'Our signature blend of aromatic whole spices ground to perfection.',
     weight: '100g',
-    price: '₹120',
+    price: '₹40',
     image_url:
-      'https://images.pexels.com/photos/6512996/pexels-photo-6512996.jpeg?auto=compress&cs=tinysrgb&w=800',
+      '/parashree_buknoo.jpg',
     is_featured: true,
     sort_order: 1,
-  },
-  {
-    id: '2',
-    name: 'Turmeric Powder',
-    description:
-      'Pure, vibrant turmeric sourced from the finest farms.',
-    weight: '200g',
-    price: '₹80',
-    image_url:
-      'https://images.pexels.com/photos/5765/food-spices-pepper-salt.jpg?auto=compress&cs=tinysrgb&w=800',
-    is_featured: true,
-    sort_order: 2,
-  },
-  {
-    id: '3',
-    name: 'Red Chilli Powder',
-    description:
-      'Fiery, bold Kashmiri red chilli powder.',
-    weight: '100g',
-    price: '₹90',
-    image_url:
-      'https://images.pexels.com/photos/1340116/pexels-photo-1340116.jpeg?auto=compress&cs=tinysrgb&w=800',
-    is_featured: true,
-    sort_order: 3,
-  },
-  {
-    id: '4',
-    name: 'Coriander Powder',
-    description:
-      'Freshly ground coriander seeds.',
-    weight: '200g',
-    price: '₹75',
-    image_url:
-      'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=800',
-    is_featured: true,
-    sort_order: 4,
-  },
-  {
-    id: '5',
-    name: 'Cumin Powder',
-    description:
-      'Premium cumin ground fresh.',
-    weight: '100g',
-    price: '₹85',
-    image_url:
-      'https://images.pexels.com/photos/6471941/pexels-photo-6471941.jpeg?auto=compress&cs=tinysrgb&w=800',
-    is_featured: false,
-    sort_order: 5,
-  },
-  {
-    id: '6',
-    name: 'Kitchen King Masala',
-    description:
-      'The ultimate all-purpose spice blend.',
-    weight: '100g',
-    price: '₹130',
-    image_url:
-      'https://images.pexels.com/photos/7474222/pexels-photo-7474222.jpeg?auto=compress&cs=tinysrgb&w=800',
-    is_featured: false,
-    sort_order: 6,
   },
 ];
 
